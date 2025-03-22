@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #0f172a;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background: #1e293b;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #0ea5e9;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.search-container {
+    width: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+#countryInput {
+    flex: 1;
+    padding: 1rem;
+    border: 2px solid #334155;
+    border-radius: 8px;
+    background: #1e293b;
+    color: #fff;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#countryInput:focus {
+    outline: none;
+    border-color: #0ea5e9;
+}
+
+#searchBtn {
+    padding: 1rem 2rem;
+    background: #0ea5e9;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#searchBtn:hover {
+    background: #0284c7;
+}
+
+#results {
+    display: none;
+    background: #334155;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #475569;
+    border-radius: 6px;
+}
+
+.stat-label {
+    font-weight: 500;
+    color: #94a3b8;
+    font-size: 1.1rem;
+}
+
+.stat-value {
+    font-weight: 600;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .search-container {
+        flex-direction: column;
+    }
+    
+    #searchBtn {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+/* ... (keep previous styles) */
+
+#results {
+    display: block;
+    background: #334155;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.data-card {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.data-item {
+    background: #475569;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.data-item h3 {
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.data-value {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+}

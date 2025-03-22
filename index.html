@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Country Data</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>COVID-19 Tracker</h1>
+        
+        <div class="search-container">
+            <input 
+                type="text" 
+                id="countryInput" 
+                placeholder="Enter country name..."
+                autocomplete="off"
+            >
+            <button id="searchBtn" onclick="run()">Search</button>
+        </div>
+
+        <div id="results">
+            <div class="data-card">
+                <div class="data-item">
+                    <h3>Total Cases</h3>
+                    <div class="data-value" id="totalCases">0</div>
+                </div>
+                <div class="data-item">
+                    <h3>Active Cases</h3>
+                    <div class="data-value" id="activeCases">0</div>
+                </div>
+                <div class="data-item">
+                    <h3>Recovered</h3>
+                    <div class="data-value" id="recovered">0</div>
+                </div>
+                <div class="data-item">
+                    <h3>Deaths</h3>
+                    <div class="data-value" id="deaths">0</div>
+                </div>
+                <div class="data-item">
+                    <h3>Total Tests</h3>
+                    <div class="data-value" id="totalTests">0</div>
+                </div>
+                <div class="data-item">
+                    <h3>Continent</h3>
+                    <div class="data-value" id="continent">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
